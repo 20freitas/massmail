@@ -387,82 +387,117 @@ export default function LandingPage() {
 
       {/* Pricing Section */}
       <section className="px-6 py-20 bg-gray-800/50">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Start Converting More Leads Today
+            Escolhe o plano ideal para ti
           </h2>
           <p className="text-xl text-gray-300 mb-12">
-            Choose the plan that fits your business growth goals
+            CSV e escolha de delay estão disponíveis apenas nos planos pagos.
           </p>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Starter Plan */}
-            <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
-              <h3 className="text-2xl font-bold text-white mb-2">Starter</h3>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Free Plan */}
+            <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-colors text-left">
+              <h3 className="text-2xl font-bold text-white mb-2">Free</h3>
               <div className="text-4xl font-bold text-white mb-4">
-                $0<span className="text-lg text-gray-400">/month</span>
+                €0<span className="text-lg text-gray-400">/mês</span>
               </div>
-              <ul className="space-y-3 mb-8 text-left">
+              <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">500 emails per day</span>
+                  <span className="text-gray-300">20 emails por dia</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">Real-time progress tracking</span>
+                  <span className="text-gray-300">Tracking em tempo real</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">CSV import & email validation</span>
+                  <span className="text-gray-300">Suporte a HTML</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">HTML email support</span>
+                <li className="flex items-center gap-2 opacity-60">
+                  <span className="w-5 h-5 inline-flex items-center justify-center rounded bg-gray-700 text-gray-300 text-[10px]">×</span>
+                  <span className="text-gray-400">Importação CSV (apenas planos pagos)</span>
+                </li>
+                <li className="flex items-center gap-2 opacity-60">
+                  <span className="w-5 h-5 inline-flex items-center justify-center rounded bg-gray-700 text-gray-300 text-[10px]">×</span>
+                  <span className="text-gray-400">Escolher delay (usa o mais lento)</span>
                 </li>
               </ul>
-              <Link 
-                href="/dashboard" 
-                className="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 rounded-lg font-semibold transition-colors block text-center"
-              >
-                Start Free Now
+              <Link href="/dashboard" className="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 rounded-lg font-semibold transition-colors block text-center">
+                Começar grátis
               </Link>
             </div>
 
+            {/* Normal Plan */}
+            <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-colors relative text-left">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="bg-indigo-600 text-white px-4 py-1 rounded-full text-sm font-semibold shadow">Popular</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Normal</h3>
+              <div className="text-4xl font-bold text-white mb-4">
+                €2,99<span className="text-lg text-gray-400">/mês</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-2">
+                  <Check className="w-5 h-5 text-indigo-400" />
+                  <span className="text-gray-300">100 emails por dia</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-5 h-5 text-indigo-400" />
+                  <span className="text-gray-300">Importação CSV</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-5 h-5 text-indigo-400" />
+                  <span className="text-gray-300">Escolha de delay</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-5 h-5 text-indigo-400" />
+                  <span className="text-gray-300">Tracking em tempo real</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-5 h-5 text-indigo-400" />
+                  <span className="text-gray-300">Suporte a HTML</span>
+                </li>
+              </ul>
+              <button className="w-full bg-white text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Obter Normal
+              </button>
+            </div>
+
             {/* Pro Plan */}
-            <div className="bg-gradient-to-b from-blue-600 to-blue-700 rounded-xl p-8 border border-blue-500 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                  Best Value
-                </span>
+            <div className="bg-gradient-to-b from-blue-600 to-blue-700 rounded-2xl p-8 border border-blue-500 relative text-left">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow">Melhor oferta</span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Pro</h3>
               <div className="text-4xl font-bold text-white mb-4">
-                $29<span className="text-lg text-blue-200">/month</span>
+                €7,99<span className="text-lg text-blue-200">/mês</span>
               </div>
-              <ul className="space-y-3 mb-8 text-left">
+              <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-blue-200" />
-                  <span className="text-blue-100">5,000 emails per day</span>
+                  <span className="text-blue-100">500 emails por dia</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-blue-200" />
-                  <span className="text-blue-100">Advanced email templates</span>
+                  <span className="text-blue-100">Importação CSV</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-blue-200" />
-                  <span className="text-blue-100">A/B testing & optimization</span>
+                  <span className="text-blue-100">Escolha de delay</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-blue-200" />
-                  <span className="text-blue-100">Priority support</span>
+                  <span className="text-blue-100">Tracking em tempo real</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-blue-200" />
-                  <span className="text-blue-100">Custom integrations</span>
+                  <span className="text-blue-100">Suporte a HTML</span>
                 </li>
               </ul>
-              <button className="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Upgrade to Pro
+              <button className="w-full bg-white text-blue-700 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Obter Pro
               </button>
             </div>
           </div>

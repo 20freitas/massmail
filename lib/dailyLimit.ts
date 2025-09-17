@@ -7,6 +7,7 @@ interface DailyLimit {
 class DailyLimitManager {
   private storageKey = 'mass-mail-daily-limit';
   
+  
   private getTodayKey(): string {
     return new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   }
